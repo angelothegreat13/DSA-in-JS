@@ -1,5 +1,5 @@
 /**
- * 121. Best Time to Buy and Sell Stock (https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) 
+ * 121. Best Time to Buy and Sell Stock (https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) (Easy) 
  * 
  * Buy Low Sell High
  * You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -19,7 +19,30 @@
  */
 
 var maxProfit = function(prices) {
+    let n = prices.length;
 
+    if (n === 0) {
+        return 0;
+    }
+
+    let minPrice = prices[0];
+    let maxProfit = 0
+
+    for (let i = 0; i < n; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i];
+        }
+
+        let profit = prices[i] - minPrice;
+
+        if (profit > maxProfit) {
+            maxProfit = profit;
+        }
+    }
+
+    return maxProfit;
 };
 
-
+const prices = [7,1,5,3,6,4];
+const prices2 = [7,6,4,3,1];
+console.log(maxProfit(prices));
