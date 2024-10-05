@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/two-sum/description/
+
 // brute force approach
 // O(n^2) time complexity
 var twoSum = function(nums, target) {   
