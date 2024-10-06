@@ -19,6 +19,7 @@
  * Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  */
 
+
 var isPalindrome = function(x) {
     let str = x.toString();
     let reversedStr = '';
