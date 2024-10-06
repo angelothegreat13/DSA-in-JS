@@ -27,10 +27,10 @@ var isPalindrome = function(x) {
         reversedStr += str[i];
     }
 
-    return (reversedStr == x) ? true : false;
+    return reversedStr === str;
 };
 
 let x = 121;
-let x2 = -121;
-let x3 = 10;
+// let x = -121;
+// let x = 10;
 console.log(isPalindrome(x));
