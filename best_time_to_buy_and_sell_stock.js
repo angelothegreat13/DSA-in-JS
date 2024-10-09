@@ -18,30 +18,30 @@
  * Explanation: In this case, no transactions are done and the max profit = 0.
  */
 
-// var maxProfit = function(prices) {
-//     let n = prices.length;
+var maxProfit = function(prices) {
+    let n = prices.length;
 
-//     if (n === 0) {
-//         return 0;
-//     }
+    if (n === 0) {
+        return 0;
+    }
 
-//     let minPrice = prices[0];
-//     let maxProfit = 0
+    let minPrice = prices[0];
+    let maxProfit = 0
 
-//     for (let i = 0; i < n; i++) {
-//         if (prices[i] < minPrice) {
-//             minPrice = prices[i];
-//         }
+    for (let i = 0; i < n; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i];
+        }
 
-//         let profit = prices[i] - minPrice;
+        let profit = prices[i] - minPrice;
 
-//         if (profit > maxProfit) {
-//             maxProfit = profit;
-//         }
-//     }
+        if (profit > maxProfit) {
+            maxProfit = profit;
+        }
+    }
 
-//     return maxProfit;
-// };
+    return maxProfit;
+};
 
 // using two pointers approach
 var maxProfit = function(prices) {
@@ -57,7 +57,7 @@ var maxProfit = function(prices) {
         } else {
             left = right;
         }
-        
+
         right++;
     }
 
