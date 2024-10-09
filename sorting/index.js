@@ -11,8 +11,8 @@ var simpleSort = function(nums) {
         }
     }
 
-    console.log(nums);
+    return nums;
 }
 
 const nums = [3,1,2,4,6,11,-1];
-simpleSort(nums);
+console.log(simpleSort(nums));
